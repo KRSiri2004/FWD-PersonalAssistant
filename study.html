@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Study Scheduler</title>
+    <link rel="stylesheet" href="study.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1> Personal Scheduler</h1>
+            <button id="theme-toggle-btn" class="theme-toggle-btn">Theme</button>
+            <p>Add your tasks, and let us generate a schedule for you!</p>
+        </header>
+
+        <form id="task-form">
+            <input type="text" id="task-title" placeholder="e.g., Research for History Essay" required>
+            <input type="text" id="task-subject" placeholder="e.g., History">
+            
+            <div class="duration-label">Task Duration</div>
+            <div class="duration-inputs-wrapper">
+                <input type="number" id="task-duration-hours" placeholder="Hours" min="0">
+                <input type="number" id="task-duration-minutes" placeholder="Minutes" min="0" max="59" step="5">
+            </div>
+            
+            <div class="date-priority-wrapper">
+                <input type="date" id="task-due-date" required>
+                <select id="task-priority">
+                    <option value="high">High Priority</option>
+                    <option value="medium" selected>Medium Priority</option>
+                    <option value="low">Low Priority</option>
+                </select>
+            </div>
+            <button type="submit">Add Task to List</button>
+        </form>
+
+        <main>
+            <div class="schedule-controls">
+                <button id="generate-schedule-btn">Generate My Schedule</button>
+            </div>
+            <h2>My Schedule</h2>
+            <div id="schedule-container"></div>
+            <h2>Unscheduled Tasks</h2>
+            <div id="unscheduled-list"></div>
+        </main>
+    </div>
+
+    <script src="study.js"></script>
+</body>
+</html>

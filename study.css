@@ -1,0 +1,202 @@
+@media (max-width: 600px) {
+    body { padding: 10px; }
+    .container { padding: 15px; }
+    header h1 { font-size: 1.5em; }
+    .duration-inputs-wrapper, .date-priority-wrapper { flex-direction: column; }
+    #task-form { gap: 12px; }
+}
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #5bb5f27f;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.container {
+    width: 100%;
+    max-width: 700px;
+    background: #9f9ed7;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    transition: background-color 0.3s ease;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 20px;
+    position: relative;
+}
+
+header h1 {
+    margin: 0;
+    color: #4a47a3;
+}
+
+header p {
+    color: #777;
+}
+
+.theme-toggle-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: #e0e0e0;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+#task-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#task-form input, #task-form select, #task-form button {
+    width: 100%;
+    padding: 12px 15px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+    box-sizing: border-box;
+    background-color: #fff;
+    color: #333;
+}
+
+.duration-label {
+    font-size: 0.9em;
+    color: #555;
+    margin-bottom: -10px;
+}
+.duration-inputs-wrapper, .date-priority-wrapper {
+    display: flex;
+    gap: 15px;
+}
+.duration-inputs-wrapper > input, .date-priority-wrapper > * {
+    flex: 1;
+}
+
+#task-form button {
+    background-color: #4a47a3;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+}
+#task-form button:hover {
+    background-color: #35327a;
+}
+main h2 {
+    text-align: center;
+    color: #4a47a3;
+    margin-top: 30px;
+}
+
+#generate-schedule-btn {
+    background-color: #6bcd82;
+    color: white;
+    padding: 12px 25px;
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+}
+#generate-schedule-btn:hover {
+    background-color: #59b76d;
+}
+
+.day-schedule {
+    background: #f9f9f9;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+.time-slot h4 {
+    color: #555;
+}
+
+.task-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #fff;
+    padding: 10px;
+    border-radius: 6px;
+    margin-bottom: 8px;
+    border-left: 5px solid;
+}
+.task-item[data-priority="high"] { border-color: #ffe100; }
+.task-item[data-priority="medium"] { border-color: #11eb56; }
+.task-item[data-priority="low"] { border-color: #9773ec; }
+.task-item.completed { text-decoration: line-through; opacity: 0.6; }
+
+.task-duration { color: #777; }
+.task-actions button { background: none; border: none; cursor: pointer; font-size: 18px; }
+.complete-btn { color: #4caf50; }
+.delete-btn { color: #f44336; }
+body.dark-mode {
+    background-color: #1a1a2e;
+    color: #e0e0e0;
+}
+body.dark-mode .container {
+    background-color: #16213e;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+body.dark-mode header {
+    border-bottom-color: #444;
+}
+body.dark-mode header h1 {
+    color: #9fa8da;
+}
+body.dark-mode header p {
+    color: #a0a0a0;
+}
+body.dark-mode .theme-toggle-btn {
+    background: #0f3460;
+    border-color: #444;
+}
+body.dark-mode #task-form input,
+body.dark-mode #task-form select {
+    background-color: #16213e;
+    color: #e0e0e0;
+    border-color: #444;
+}
+body.dark-mode .duration-label {
+    color: #a0a0a0;
+}
+body.dark-mode #task-form button {
+    background-color: #9fa8da;
+    color: #1a1a2e;
+}
+body.dark-mode #task-form button:hover {
+    background-color: #7986cb;
+}
+body.dark-mode main h2 {
+    color: #9fa8da;
+}
+body.dark-mode .day-schedule {
+    background: #0f3460;
+    border-color: #444;
+}
+body.dark-mode .time-slot h4 {
+    color: #a0a0a0;
+}
+body.dark-mode .task-item {
+    background: #1e3d59;
+}
+body.dark-mode .task-duration {
+    color: #a0a0a0;
+}
