@@ -1,0 +1,1 @@
+This project was build as a part of edunet front end development internship.
